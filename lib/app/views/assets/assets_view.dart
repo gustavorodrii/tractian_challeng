@@ -122,7 +122,7 @@ class AssetsView extends StatelessWidget {
                           ),
                           const SizedBox(width: 8),
                           FilterOptionsButton(
-                            buttonText: "Critico",
+                            buttonText: "Crítico",
                             height: 36,
                             borderRadius: 3,
                             onTap: () => controller.toggleCriticButton(),
