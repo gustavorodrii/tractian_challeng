@@ -33,7 +33,6 @@ class CompanyController extends GetxController {
         companiesList.add(CompanyModel.fromJson(element));
       }
     } catch (e) {
-      print('37');
       throw Error();
     }
     update();
@@ -68,11 +67,7 @@ class CompanyController extends GetxController {
       Iterable<AssetModel> noChildAssets = assetList.where((element) => element.assetList.isEmpty);
       Iterable<AssetModel> childAssets = assetList.where((element) => element.assetList.isNotEmpty);
       assetList = [...noChildAssets, ...childAssets];
-    } catch (e, stackTrace) {
-      print('72');
-
-      print(stackTrace);
-    }
+    } catch (e, stackTrace) {}
     update();
 
     return assetList;
@@ -108,7 +103,6 @@ class CompanyController extends GetxController {
           locationList.where((element) => element.childLocations.isNotEmpty);
       locationList = [...childLocations, ...noChildLocations];
     } catch (e) {
-      print('110');
       throw Error();
     }
     update();

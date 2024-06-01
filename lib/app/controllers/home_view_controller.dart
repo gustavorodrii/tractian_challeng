@@ -15,7 +15,7 @@ class HomeViewController extends GetxController {
         val?.companiesList = companies;
       });
     } catch (e) {
-      print(e);
+      throw Error();
     }
   }
 
